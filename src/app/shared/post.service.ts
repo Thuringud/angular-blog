@@ -47,6 +47,10 @@ export class PostService {
       }))
   }
 
+  update(post: Post): Observable<Post> {
+    return this.http.patch<Post>(`${environment.FireBaseDBurl}/posts/${post.id}.json`, post)
+  }
+
   remove(id: string): Observable<void> {
     return this.http.delete<void>(`${environment.FireBaseDBurl}/posts/${id}.json`)
   }
