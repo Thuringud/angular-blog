@@ -23,7 +23,7 @@
           class="btn btn-link open"
           [routerLink]="['/admin', 'post', post.id, 'edit']"
         >Открыть</button>
-        <a (click)="remove(post.id)">Удалить</a>
+        <a *ngIf="post.id" (click)="remove(post.id)">Удалить</a>
       </td>
     </tr>
     </tbody>
