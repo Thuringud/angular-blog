@@ -4,7 +4,7 @@ import {catchError, Observable, Subject, tap, throwError} from "rxjs";
 import {environment} from "../../../../environments/environment";
 import {FireBaseAuthResponse, User} from "../../../shared/interfaces";
 
-@Injectable()
+@Injectable({providedIn: "root"})
 
 export class AuthService {
 
